@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+.nm{
+width:30%;display:flex;flex-direction:row;justify-content:space-around;
+}
+ body{
+font-family: 'Kumbh Sans', sans-serif;
+background-color:hsl(185, 75%, 39%);
+background-image:url('images/bg-pattern-top.svg'),url('images/bg-pattern-bottom.svg');
+background-position:-150px -300px,250px 300px;
+background-size:85% 130%,50% 150%;
+background-repeat:no-repeat,no-repeat;
+}
+.desktop-profile{
+visibility:hidden;
+}
+.details{
+display:flex;
+flex-direction:column;
+justify-content:space-around;
+}
+
+.profile{
+transition-duration:0.5s;
+position:relative;
+display:flex;
+font-weight:400;
+flex-direction:column;
+background-image:url('images/bg-pattern-card.svg');
+background-size:100% 40%;
+background-repeat:no-repeat;
+background-color:#ffffff;
+margin-left:2%;
+margin-right:2%;
+margin-top:30%;
+font-size:18px;
+border-radius:10px;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+.stats{
+display:flex;
+flex-direction:row;
+justify-content:space-around;
+}
+.victor{
+border:5px solid #ffffff;
+border-radius:100px;
+}
+    .attribution { position:absolute;left:20%;bottom:0%;font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+@media screen and (min-width:800px){
+.desktop-preview{
+transition-duration:0.5s;
+position:absolute;
+visibility:visible;
+background-color:hsl(185, 75%, 39%);
+width:90%;
+height:80%;
+top:10%;
+left:5%;
+background-image:url('images/bg-pattern-top.svg'),url('images/bg-pattern-bottom.svg');
+background-position:-600px -300px,600px 300px;
+background-repeat:no-repeat,no-repeat;
+background-size:100% 100%,100% 100%;
+box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+.profile{
+position:relative;
+top:-50%;
+width:25%;
+box-shadow:0 0 100px rgba(0,0,0,0.5);
+}
+.nm{
+width:50%;
+}
+body{
+background:#eeeeee;
+}
+.desktop-preview:hover{
+width:100%;
+height:100%;
+top:0;
+left:0;
+transition-duration:0.5s;
+}
+.desktop-preview:hover .profile{
+top:-40%;
+width:30%;
+height:50%;
+transition-duration:0.5s;
+}
+} 
+}
+
+  </style>
+</head>
+<body>
+
+<center><div class="desktop-preview">
+<div class="profile">
+<br><br><br>
+<div><img class="victor" src="images/image-victor.jpg"></div>
+<center><div class="nm"> <div style="font-weight:700;"> Victor Crest</div><div style="font-weight:400;">
+  26</div></div></center>
+  <div style="font-size:16px;font-weight:400;">London</div>
+<br><br>
+<div class="stats">
+<div class="details">
+  <div style="font-weight:700;">80K</div>
+    <div style="font-size:12px;font-weight:400;">Followers</div></div>
+<div class="details">
+   <div style="font-weight:700;">803K</div>
+   <div style="font-size:12px;font-weight:400;"> Likes</div></div>
+<div class="details">
+ <div style="font-weight:1000;">1.4K</div>
+  <div style="font-size:12px;font-weight:400;">Photos </div></div>
+</div></div></center>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Barnil Sarma</a>.
+  </div>
+</body>
+</html>
